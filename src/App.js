@@ -6,7 +6,7 @@ function App() {
 			id: "e1",
 			title: "Toilet Paper",
 			amount: 94.12,
-			date: new Date(2020, 7, 14),
+			date: new Date(2020, 9, 14),
 		},
 		{
 			id: "e2",
@@ -27,14 +27,16 @@ function App() {
 			date: new Date(2020, 7, 14),
 		},
 	];
+
+
+	let newArr = expenses.map((expense) => {
+		return <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} />;
+	});
+
 	return (
 		<div>
 			<h2>Let's get started!</h2>
-      
-			<ExpenseItem></ExpenseItem>
-			<ExpenseItem></ExpenseItem>
-			<ExpenseItem></ExpenseItem>
-			<ExpenseItem></ExpenseItem>
+			{newArr}
 		</div>
 	);
 }
