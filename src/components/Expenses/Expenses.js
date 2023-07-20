@@ -28,7 +28,7 @@ const expenses = [
 	},
 ];
 let ExpensesArr = expenses.map((expense) => {
-	return <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} />;
+	return <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} />;
 });
 const Expenses = () => {
 	return <Card className="expenses">{ExpensesArr}</Card>;
