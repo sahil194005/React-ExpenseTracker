@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = (props) => {
+	
 	const [userInput, SetUserInput] = useState({
 		enteredTitle: "",
 		enteredAmount: "",
