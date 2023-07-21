@@ -5,10 +5,13 @@ import ExpensesFilter from "./ExpensesFilter";
 import { useState } from "react";
 
 const Expenses = (props) => {
-
 	const [filteredYear, setFilteredYear] = useState("2020");
 
-	let ExpensesArr = props.items.map((expense) => {
+	let FilteredArr = props.items.filter((expense) => {
+		return expense.date.getFullYear().toString() === filteredYear;
+	});
+
+	let ExpensesArr = FilteredArr.map((expense) => {
 		return <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} />;
 	});
 
