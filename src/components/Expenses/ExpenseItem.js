@@ -19,6 +19,7 @@ const [amount,setAmount] = useState(props.amount)
 		setAmount(100)
 	};
 	return (
+		<li>
 		<Card className="expense-item">
 			<ExpenseDate date={props.date} />
 			<div className="expense-item__description">
@@ -28,6 +29,7 @@ const [amount,setAmount] = useState(props.amount)
 			<button onClick={clickHandler}>Change Title</button>
 			<button onClick={priceHandler}>Set price to 100</button>
 		</Card>
+		</li>
 	);
 };
 export default ExpenseItem;
